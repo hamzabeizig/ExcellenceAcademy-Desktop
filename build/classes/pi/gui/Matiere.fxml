@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.gui.MatiereController">
+    <stylesheets>
+        <URL value="@/gui/style/mystyle.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="897.0" styleClass="bodyback" stylesheets="@../../../../el7achwaa/src/gui/style/mystyle.css">
+         <children>
+            <Label fx:id="label1" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+            <Label layoutX="140.0" layoutY="24.0" text="Bonjour">
+               <font>
+                  <Font name="Garamond" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="152.0" layoutY="46.0" text="Administrateur" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Sitka Banner Bold" size="24.0" />
+               </font>
+            </Label>
+            <ButtonBar layoutX="128.0" layoutY="159.0" prefHeight="40.0" prefWidth="72.0" />
+            <Button fx:id="btn_eve" layoutX="56.0" layoutY="313.0" mnemonicParsing="false" onAction="#evenement2" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Evenements" />
+            <Button fx:id="btn_ut" layoutX="53.0" layoutY="125.0" mnemonicParsing="false" onAction="#Utilisateurs1" prefHeight="25.0" prefWidth="116.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Utilisateurs" />
+            <Button fx:id="btn_emp" layoutX="53.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Emplois" />
+            <Button fx:id="btn_res" layoutX="56.0" layoutY="263.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Resultats" />
+            <Button fx:id="btn_st" layoutX="59.0" layoutY="357.0" mnemonicParsing="false" onAction="#Stage" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Stages" />
+            <Button fx:id="btn_mat" layoutX="59.0" layoutY="400.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="110.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Matieres " />
+            <Label layoutX="328.0" layoutY="94.0" prefHeight="35.0" prefWidth="336.0" text="Gerer la liste des Matieres">
+               <font>
+                  <Font name="Sitka Banner" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_dep" layoutX="53.0" layoutY="167.0" mnemonicParsing="false" onAction="#Departement1" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Departements" />
+            <Button fx:id="btn_dec" layoutX="58.0" layoutY="446.0" mnemonicParsing="false" onAction="#deconnecter3" prefHeight="27.0" prefWidth="110.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Déconnexion" />
+            <AnchorPane layoutX="192.0" layoutY="163.0" prefHeight="359.0" prefWidth="571.0">
+               <children>
+                  <HBox layoutX="28.0" layoutY="33.0" prefHeight="131.0" prefWidth="535.0" style="-fx-border-color: #000000; -fx-border-radius: 5;">
+                     <children>
+                        <VBox prefHeight="129.0" prefWidth="122.0">
+                           <children>
+                              <Label text="Nom Matiere :">
+                                 <VBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="27.0" prefWidth="63.0" text="Coefficient :">
+                                 <VBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="30.0" prefWidth="108.0" text="Volume des heures :">
+                                 <VBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="129.0" prefWidth="188.0">
+                           <children>
+                              <TextField fx:id="txt_nomM" prefHeight="25.0" prefWidth="188.0">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="txt_coef" prefHeight="28.0" prefWidth="188.0">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="txt_vol" prefHeight="33.0" prefWidth="188.0">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <Button fx:id="btnajMat" mnemonicParsing="false" onAction="#AjouterMat" prefHeight="25.0" prefWidth="69.0" style="-fx-background-radius: 100;" text="Ajouter">
+                           <HBox.margin>
+                              <Insets left="145.0" top="100.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label layoutX="28.0" layoutY="6.0" prefHeight="27.0" prefWidth="216.0" text="Ajout d'une matiere :">
+                     <font>
+                        <Font name="Sitka Banner" size="24.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tv" layoutX="28.0" layoutY="180.0" prefHeight="154.0" prefWidth="535.0">
+                    <columns>
+                      <TableColumn fx:id="cl_id" prefWidth="105.0" text="Id" />
+                      <TableColumn fx:id="cl_nom" prefWidth="123.0" text="Nom" />
+                        <TableColumn fx:id="cl_coeff" prefWidth="175.0" text="Coefficient" />
+                        <TableColumn fx:id="cl_V" prefWidth="131.0" text="Volume_h" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="478.0" layoutY="346.0" mnemonicParsing="false" onAction="#suppressionMat" prefHeight="25.0" prefWidth="77.0" style="-fx-background-radius: 100;" text="Supprimer" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

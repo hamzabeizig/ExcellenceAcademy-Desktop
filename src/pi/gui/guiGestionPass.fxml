@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="800.0" styleClass="bodyback" stylesheets="@../../gui/style/mystyle.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.gui.guiGestionPassController">
+    <children>
+      <Button layoutX="402.0" layoutY="405.0" mnemonicParsing="false" onAction="#handleeditpass" prefHeight="32.0" prefWidth="124.0" style="-fx-background-color: transparent; -fx-border-color: gray; -fx-border-radius: 20;" text="Valider">
+         <font>
+            <Font name="Lucida Console" size="16.0" />
+         </font></Button>
+      <TextField fx:id="kkk" disable="true" layoutX="365.0" layoutY="445.0" opacity="0.1" prefHeight="25.0" prefWidth="37.0" promptText="ID" />
+      <Label layoutX="283.0" layoutY="96.0" prefHeight="32.0" prefWidth="316.0" text="Modifier votre mot de passe" textFill="#5e2a2a" underline="true">
+         <font>
+            <Font name="Book Antiqua" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="155.0" prefHeight="34.0" prefWidth="149.0" text="Bienvenue">
+         <font>
+            <Font name="Dubai Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="ensname" layoutX="198.0" layoutY="48.0" prefHeight="19.0" prefWidth="124.0" text="Enseignant Name" textFill="#6b6b6b">
+         <font>
+            <Font name="Book Antiqua" size="15.0" />
+         </font>
+      </Label>
+      <Icon content="BATTERY_UNKNOWN" layoutX="520.0" layoutY="23.0" minHeight="-Infinity" prefHeight="34.0" prefWidth="37.0" style="-fx-border-color: gray; -fx-border-radius: 50; -fx-background-color: transparent; -fx-background-radius: 50;" />
+      <Button fx:id="profilbutton" layoutX="523.0" layoutY="26.0" mnemonicParsing="false" onAction="#handlegoprofil" prefHeight="27.0" prefWidth="31.0" style="-fx-background-color: transparent;" />
+      <VBox alignment="TOP_RIGHT" layoutX="32.0" layoutY="112.0" prefHeight="372.0" prefWidth="139.0" spacing="50.0">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="139.0" style="-fx-background-color: #ECECEC; -fx-background-radius: 100;">
+               <children>
+                  <Icon content="BATTERY_STD" prefHeight="25.0" prefWidth="30.0" />
+                  <Button mnemonicParsing="false" onAction="#handlegocours" prefHeight="27.0" prefWidth="61.0" style="-fx-background-color: transparent;" text="Cours" textFill="#535251">
+                     <font>
+                        <Font name="Sitka Small" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="28.0" prefWidth="139.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;">
+               <children>
+                  <Icon content="SD_STORAGE" prefHeight="28.0" prefWidth="30.0" />
+                  <Button mnemonicParsing="false" onAction="#handlegonote" prefHeight="28.0" prefWidth="67.0" style="-fx-background-color: transparent;" text="Notes" textFill="#535251">
+                     <font>
+                        <Font name="Sitka Small" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="139.0" style="-fx-background-color: #ECECEC; -fx-background-radius: 100;">
+               <children>
+                  <Icon content="ERROR_OUTLINE" prefHeight="28.0" prefWidth="30.0" />
+                  <Button mnemonicParsing="false" onAction="#handlegoassi" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="Assiduité" textFill="#535251">
+                     <font>
+                        <Font name="Sitka Small" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="146.0" prefHeight="28.0" prefWidth="139.0" style="-fx-background-color: #ECECEC; -fx-background-radius: 100;">
+               <children>
+                  <Icon content="SEND" prefHeight="29.0" prefWidth="30.0" />
+                  <Button mnemonicParsing="false" onAction="#handlegoemp" prefHeight="28.0" prefWidth="69.0" style="-fx-background-color: transparent;" text="Emploi" textFill="#535251">
+                     <font>
+                        <Font name="Sitka Small" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="214.0" prefHeight="28.0" prefWidth="139.0" style="-fx-background-color: #ECECEC; -fx-background-radius: 100;">
+               <children>
+                  <Icon content="CALL_MERGE" prefHeight="28.0" prefWidth="27.0" />
+                  <Button mnemonicParsing="false" onAction="#handlegofirst" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Déconnexion" textFill="#535251">
+                     <font>
+                        <Font name="Sitka Small" size="12.5" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="662.0" layoutY="99.0" prefHeight="26.0" prefWidth="127.0" style="-fx-border-color: gray; -fx-background-color: gray;">
+         <children>
+            <Icon content="CONTENT_COPY" layoutX="86.0" layoutY="10.0" prefHeight="24.0" prefWidth="20.0" />
+            <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Mot de passe">
+               <font>
+                  <Font name="Bernard MT Condensed" size="12.0" />
+               </font>
+            </Button>
+            <Icon content="CONTENT_COPY" prefHeight="24.0" prefWidth="20.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="260.0" layoutY="199.0" prefHeight="19.0" prefWidth="181.0">
+         <children>
+            <Icon content="CONTENT_COPY" prefHeight="19.0" prefWidth="29.0" />
+            <Label prefHeight="15.0" prefWidth="141.0" text="Anicen mot de passe">
+               <font>
+                  <Font name="Sitka Small" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="275.0" layoutY="232.0" prefHeight="19.0" prefWidth="181.0" />
+      <HBox layoutX="259.0" layoutY="341.0" prefHeight="19.0" prefWidth="250.0">
+         <children>
+            <Icon content="CONTENT_COPY" prefHeight="19.0" prefWidth="29.0" />
+            <Label prefHeight="15.0" prefWidth="219.0" text="Confirmer nouveau mot de passe">
+               <font>
+                  <Font name="Sitka Small" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="259.0" layoutY="268.0" prefHeight="19.0" prefWidth="250.0">
+         <children>
+            <Icon content="CONTENT_COPY" prefHeight="19.0" prefWidth="29.0" />
+            <Label prefHeight="15.0" prefWidth="219.0" text="Nouveau mot de passe">
+               <font>
+                  <Font name="Sitka Small" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <PasswordField fx:id="p1f" layoutX="525.0" layoutY="196.0" />
+      <PasswordField fx:id="p2f" layoutX="525.0" layoutY="265.0" />
+      <PasswordField fx:id="p3f" layoutX="525.0" layoutY="338.0" />
+      <Label layoutX="689.0" layoutY="269.0" text="( Au moins 8 caracteres )" textFill="#9a3b3b">
+         <font>
+            <Font name="Ebrima" size="8.0" />
+         </font>
+      </Label>
+      <Label layoutX="689.0" layoutY="345.0" text="( Au moins 8 caracteres )" textFill="#9a3b3b">
+         <font>
+            <Font name="Ebrima" size="8.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

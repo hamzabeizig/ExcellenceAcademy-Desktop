@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.gui.DepartementController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="897.0" styleClass="bodyback" stylesheets="@../../gui/style/mystyle.css">
+         <children>
+            <Label fx:id="label1" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+            <Label layoutX="140.0" layoutY="24.0" text="Bonjour">
+               <font>
+                  <Font name="Garamond" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="152.0" layoutY="46.0" text="Administrateur" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Sitka Banner Bold" size="24.0" />
+               </font>
+            </Label>
+            <ButtonBar layoutX="128.0" layoutY="159.0" prefHeight="40.0" prefWidth="72.0" />
+            <Button fx:id="btn_eve" layoutX="56.0" layoutY="313.0" mnemonicParsing="false" onAction="#evenement1" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Evenements" />
+            <Button fx:id="btn_ut" layoutX="53.0" layoutY="125.0" mnemonicParsing="false" onAction="#Utilisateurs" prefHeight="25.0" prefWidth="116.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Utilisateurs" />
+            <Button fx:id="btn_emp" layoutX="53.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Emplois" />
+            <Button fx:id="btn_res" layoutX="56.0" layoutY="263.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Resultats" />
+            <Button fx:id="btn_st" layoutX="59.0" layoutY="357.0" mnemonicParsing="false" onAction="#Stage" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Stages" />
+            <Button fx:id="btn_mat" layoutX="59.0" layoutY="400.0" mnemonicParsing="false" onAction="#Matieres" prefHeight="27.0" prefWidth="110.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Matieres " />
+            <Label layoutX="319.0" layoutY="85.0" prefHeight="35.0" prefWidth="336.0" text="Gerer la liste des departements">
+               <font>
+                  <Font name="Sitka Banner" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_dep" layoutX="53.0" layoutY="167.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Departements" />
+            <TabPane layoutX="228.0" layoutY="137.0" prefHeight="425.0" prefWidth="572.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.rightAnchor="13.0">
+               <tabs>
+                  <Tab fx:id="tab1" closable="false" text="Gestion Departements">
+                     <content>
+                        <AnchorPane accessibleRole="TABLE_VIEW" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="179.0" layoutY="91.0" prefHeight="22.0" prefWidth="228.0" text="Liste des departements">
+                                 <font>
+                                    <Font name="Sitka Banner" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tv1" layoutX="37.0" layoutY="125.0" prefHeight="186.0" prefWidth="491.0">
+                                 <columns>
+                                    <TableColumn fx:id="cl_id" prefWidth="96.0" text="Id" />
+                                    <TableColumn fx:id="cl_nom" prefWidth="260.0" text="Nom departement" />
+                                    <TableColumn fx:id="cl_chef" prefWidth="134.0" text="Chef departement" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="btnS" layoutX="433.0" layoutY="318.0" mnemonicParsing="false" onAction="#suppressiondep" prefHeight="25.0" prefWidth="103.0" style="-fx-background-radius: 100;" text="Supprimer" />
+                              <HBox layoutX="36.0" layoutY="28.0" prefHeight="57.0" prefWidth="500.0" style="-fx-border-color: #000000; -fx-border-width: 1; -fx-border-radius: 5;">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="116.0" text="Nom departement :">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="txt_nomd">
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Button fx:id="btnA" mnemonicParsing="false" onAction="#AjouterDep" prefHeight="25.0" prefWidth="93.0" style="-fx-background-radius: 100;" text="Ajouter">
+                                       <HBox.margin>
+                                          <Insets left="90.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Label layoutX="40.0" layoutY="8.0" prefHeight="22.0" prefWidth="168.0" text="Ajout departements :">
+                                 <font>
+                                    <Font name="Sitka Banner" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab2" styleClass="border" text="Affectation des enseignants ">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="3.0" prefHeight="25.0" prefWidth="216.0" text="Affectation des enseignants : ">
+                                 <font>
+                                    <Font name="Sitka Banner" size="18.0" />
+                                 </font>
+                              </Label>
+                              <HBox layoutX="11.0" layoutY="27.0" prefHeight="161.0" prefWidth="500.0" style="-fx-border-color: #000000; -fx-border-width: 1; -fx-border-radius: 5;">
+                                 <children>
+                                    <VBox prefHeight="117.0" prefWidth="139.0">
+                                       <children>
+                                          <Label prefHeight="26.0" prefWidth="108.0" text="Departement : ">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="5.0" top="10.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <RadioButton fx:id="rd1" mnemonicParsing="false" onAction="#radioSelect" prefHeight="42.0" prefWidth="121.0" text="Chef departement ">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="Mygroup" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <Label fx:id="lbl1" prefHeight="26.0" prefWidth="116.0" text="Enseignant : ">
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label fx:id="lbl2" prefHeight="43.0" prefWidth="137.0" text="Chef departement : ">
+                                             <padding>
+                                                <Insets left="5.0" top="15.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="117.0" prefWidth="183.0">
+                                       <children>
+                                          <ComboBox fx:id="cmbx_dep" prefWidth="150.0" promptText="Departements" style="-fx-background-radius: 100;">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" right="15.0" top="10.0" />
+                                             </VBox.margin>
+                                          </ComboBox>
+                                          <RadioButton fx:id="rd2" mnemonicParsing="false" onAction="#radioSelect" prefHeight="49.0" prefWidth="116.0" selected="true" text="Enseignant" toggleGroup="$Mygroup" />
+                                          <ComboBox fx:id="cmbx_ens" prefHeight="29.0" prefWidth="149.0" promptText="Enseignants" style="-fx-background-radius: 100;" />
+                                          <ComboBox fx:id="cmbx_ens1" prefHeight="29.0" prefWidth="149.0" promptText="Enseignants" style="-fx-background-radius: 100;">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ComboBox>
+                                       </children>
+                                    </VBox>
+                                    <Button fx:id="btnsupp" mnemonicParsing="false" onAction="#supprimer" prefHeight="25.0" prefWidth="93.0" style="-fx-background-radius: 100;" text="Supprimer">
+                                       <HBox.margin>
+                                          <Insets left="50.0" top="132.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="btnaff" mnemonicParsing="false" onAction="#affecter" prefHeight="25.0" prefWidth="73.0" style="-fx-background-radius: 100;" text="Affecter">
+                                       <HBox.margin>
+                                          <Insets left="15.0" right="5.0" top="132.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="15.0" layoutY="220.0" prefHeight="145.0" prefWidth="496.0" style="-fx-border-color: #000000; -fx-border-radius: 5;">
+                                 <children>
+                                    <VBox prefHeight="101.0" prefWidth="494.0">
+                                       <children>
+                                          <HBox prefHeight="35.0" prefWidth="494.0">
+                                             <children>
+                                                <Label prefHeight="37.0" prefWidth="159.0" text="Nom de departement : ">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="Sitka Banner" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox fx:id="cmbx_dep1" onAction="#afichcombo" prefHeight="33.0" prefWidth="117.0" promptText="Departements" style="-fx-background-radius: 100;">
+                                                   <HBox.margin>
+                                                      <Insets left="15.0" right="15.0" top="7.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                             </children>
+                                          </HBox>
+                                          <TableView fx:id="tv2" prefHeight="108.0" prefWidth="494.0" style="-fx-background-radius: 5;">
+                                             <columns>
+                                                <TableColumn fx:id="cl_id1" prefWidth="75.0" text="Id" />
+                                                <TableColumn fx:id="cl_nom1" minWidth="0.0" prefWidth="202.0" text="Nom" />
+                                                <TableColumn fx:id="cl_pre1" prefWidth="216.0" text="Prenom" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Label layoutX="14.0" layoutY="198.0" prefHeight="21.0" prefWidth="245.0" text="Liste des enseignants affectés  : ">
+                                 <font>
+                                    <Font name="Sitka Banner" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab3" text="Programation des réunions ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" prefHeight="35.0" prefWidth="155.0" text="Programmer réunion :">
+                                 <font>
+                                    <Font name="Sitka Banner" size="18.0" />
+                                 </font>
+                              </Label>
+                              <HBox layoutX="14.0" layoutY="35.0" prefHeight="153.0" prefWidth="491.0" style="-fx-border-radius: 5; -fx-border-color: #000000; -fx-border-width: 1;">
+                                 <children>
+                                    <VBox prefHeight="152.0" prefWidth="241.0">
+                                       <children>
+                                          <ComboBox fx:id="cmbx_dep2" prefHeight="25.0" prefWidth="120.0" promptText="Departement " style="-fx-background-radius: 100;">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="5.0" top="10.0" />
+                                             </VBox.margin>
+                                          </ComboBox>
+                                          <ComboBox fx:id="cmbx_mat" prefHeight="25.0" prefWidth="120.0" promptText="Matiere " style="-fx-background-radius: 100;">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="5.0" />
+                                             </VBox.margin>
+                                          </ComboBox>
+                                          <DatePicker fx:id="pick_dat">
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin>
+                                          </DatePicker>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Label text="Horaire :">
+                                                   <font>
+                                                      <Font name="Sitka Banner" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txt_hor" prefHeight="18.0" prefWidth="149.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="100.0" prefWidth="248.0">
+                                       <children>
+                                          <Label text="Objectif de la réunion :">
+                                             <VBox.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextArea fx:id="txt_obj" prefHeight="69.0" prefWidth="208.0" promptText="Objectif ....">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+                                             </VBox.margin>
+                                          </TextArea>
+                                          <Button fx:id="btn_prog" mnemonicParsing="false" onAction="#programmer" prefHeight="25.0" prefWidth="96.0" style="-fx-background-radius: 100;" text="Programmer">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="150.0" right="10.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tv3" layoutX="17.0" layoutY="221.0" prefHeight="140.0" prefWidth="493.0">
+                                 <columns>
+                                    <TableColumn fx:id="cl_id2" prefWidth="37.0" text="Id" />
+                                    <TableColumn fx:id="cl_date" prefWidth="108.0" text="Date" />
+                                    <TableColumn fx:id="cl_mat" prefWidth="118.0" text="Matiere" />
+                                    <TableColumn fx:id="cl_dep3" minWidth="0.0" prefWidth="146.0" text="Departement" />
+                                    <TableColumn fx:id="cl_hor" prefWidth="83.0" text="horaire" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="btn_supp2" layoutX="402.0" layoutY="369.0" mnemonicParsing="false" onAction="#supprimer1" prefHeight="27.0" prefWidth="92.0" style="-fx-background-radius: 100;" text="Supprimer" />
+                              <Label layoutX="25.0" layoutY="188.0" prefHeight="35.0" prefWidth="165.0" text="Liste des réunions :">
+                                 <font>
+                                    <Font name="Sitka Banner" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="réunions">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="4.0" prefHeight="27.0" prefWidth="216.0" text="Affectation des enseignants : ">
+                                 <font>
+                                    <Font name="Sitka Banner" size="18.0" />
+                                 </font>
+                              </Label>
+                              <HBox layoutX="14.0" layoutY="31.0" prefHeight="114.0" prefWidth="500.0" style="-fx-border-color: #000000; -fx-border-width: 1; -fx-border-radius: 5;">
+                                 <children>
+                                    <VBox prefHeight="117.0" prefWidth="139.0">
+                                       <children>
+                                          <Label prefHeight="26.0" prefWidth="108.0" text="Réunion :">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="5.0" top="10.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label fx:id="lbl11" prefHeight="26.0" prefWidth="116.0" text="Enseignants :">
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="112.0" prefWidth="211.0">
+                                       <children>
+                                          <ComboBox fx:id="cmbx_reu" prefHeight="25.0" prefWidth="182.0" promptText="Réunions" style="-fx-background-radius: 100;">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" right="15.0" top="10.0" />
+                                             </VBox.margin>
+                                          </ComboBox>
+                                          <ComboBox fx:id="cmbx_ens2" prefHeight="29.0" prefWidth="186.0" promptText="Enseignants " style="-fx-background-radius: 100;" />
+                                       </children>
+                                    </VBox>
+                                    <Button fx:id="btn_aff" mnemonicParsing="false" onAction="#mailreunion" prefHeight="25.0" prefWidth="68.0" style="-fx-background-radius: 100;" text="Affecter">
+                                       <HBox.margin>
+                                          <Insets left="70.0" top="80.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+               <effect>
+                  <DisplacementMap>
+                     <mapData>
+                        <FloatMap />
+                     </mapData>
+                  </DisplacementMap>
+               </effect>
+            </TabPane>
+            <Button fx:id="btn_dec" layoutX="58.0" layoutY="446.0" mnemonicParsing="false" onAction="#deconnecter2" prefHeight="27.0" prefWidth="110.0" style="-fx-background-color: #ececec; -fx-background-radius: 100;" text="Déconnexion" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

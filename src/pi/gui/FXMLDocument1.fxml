@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550" prefWidth="736.0" styleClass="bodyback" stylesheets="@../../gui/style/mystyle.css" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.gui.FXMLDocumentController1">
+         <children>
+            <TableView fx:id="table" layoutX="173.0" layoutY="177.0" prefHeight="272.0" prefWidth="528.0">
+              <columns>
+                <TableColumn fx:id="societe" prefWidth="91.0" text="Société" />
+                  <TableColumn fx:id="email_societe" prefWidth="101.0" text="Email Sociéte" />
+                  <TableColumn fx:id="pays" prefWidth="81.0" text="pays" />
+            <TableColumn fx:id="date_debut" prefWidth="75.0" text="date_debut" />
+                  <TableColumn fx:id="date_fin" prefWidth="92.0" text="Date_fin" />
+                  <TableColumn fx:id="type_stage" minWidth="0.0" prefWidth="87.0" text="Type_stage" />
+              </columns>
+            </TableView>
+            <Button layoutX="579.0" layoutY="467.0" mnemonicParsing="false" onAction="#afficherfor" prefHeight="30.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="Postuler ">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+            <Label layoutX="248.0" layoutY="110.0" prefHeight="45.0" prefWidth="368.0" text="Liste de stages disponibles">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+      <VBox layoutX="26.0" layoutY="103.0" prefHeight="386.0" prefWidth="135.0" spacing="15.0">
+         <children>
+            <Button fx:id="btn_prf" mnemonicParsing="false" onAction="#profil" prefHeight="28.0" prefWidth="137.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Profil" />
+            <Button fx:id="btn_emp" mnemonicParsing="false" onAction="#Emplois" prefHeight="29.0" prefWidth="137.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Emplois" />
+            <Button fx:id="btn_res" mnemonicParsing="false" onAction="#Resultat" prefHeight="30.0" prefWidth="139.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Resultats" />
+            <Button fx:id="btn_ev" mnemonicParsing="false" onAction="#Evenement" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Evenements" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="136.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Stages" />
+            <Button fx:id="btn_mat" mnemonicParsing="false" onAction="#Matrieres" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Matieres" />
+            <Button fx:id="btn_cr" layoutX="10.0" layoutY="257.0" mnemonicParsing="false" onAction="#Cours" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Cours" />
+            <Button fx:id="btn_ass" layoutX="10.0" layoutY="307.0" mnemonicParsing="false" onAction="#Assiduité" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Assiduité" />
+            <Button fx:id="btn_dec" layoutX="10.0" layoutY="322.0" mnemonicParsing="false" onAction="#Deconnecter" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Deconnexion" />
+         </children>
+      </VBox>
+      <Label layoutX="153.0" layoutY="5.0" text="Bonjour">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="248.0" layoutY="33.0" text="Etudiant">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="182.0" layoutY="467.0" mnemonicParsing="false" onAction="#demander" prefHeight="30.0" prefWidth="154.0" style="-fx-background-radius: 100;" text="Demander Convention">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txt" layoutX="505.0" layoutY="44.0" />
+         </children>
+      </AnchorPane>

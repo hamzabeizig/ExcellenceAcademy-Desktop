@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="887.0" style="-fx-background-image: bg;" styleClass="bodyback0" stylesheets="@../../gui/style/mystyle.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.gui.AuthentificationController">
+   <children>
+      <Button fx:id="con" layoutX="63.0" layoutY="404.0" mnemonicParsing="false" onAction="#conec" prefHeight="33.0" prefWidth="134.0" style="-fx-border-radius: 100; -fx-background-color: transparent; -fx-border-color: grey;" text="Se connecter">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button fx:id="quit" layoutX="708.0" layoutY="6.0" mnemonicParsing="false" onAction="#exit" opacity="0.0" prefHeight="17.0" prefWidth="72.0" style="-fx-border-radius: 100; -fx-background-color: transparent; -fx-border-color: grey;" text="Quitter" />
+      <Label fx:id="rq" layoutX="241.0" layoutY="58.0" prefHeight="40.0" prefWidth="214.0" />
+      <Label fx:id="rqcon" layoutX="309.0" layoutY="272.0" opacity="0.0" prefHeight="40.0" prefWidth="149.0" />
+      <VBox layoutX="28.0" layoutY="230.0" prefHeight="140.0" prefWidth="333.0" spacing="30.0" style="-fx-background-color: #E4E4E4; -fx-background-radius: 20;">
+         <children>
+            <HBox prefHeight="36.0" prefWidth="293.0">
+               <children>
+                  <Icon content="BATTERY_UNKNOWN" prefHeight="30.0" prefWidth="30.0" />
+                  <TextField fx:id="logintf" opacity="0.7" prefHeight="32.0" prefWidth="264.0" promptText="Nom d'utilisateur" style="-fx-border-color: gray; -fx-border-radius: 2; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1; -fx-background-color: transparent;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="293.0">
+               <children>
+                  <Icon content="CONTENT_COPY" prefHeight="33.0" prefWidth="30.0" />
+                  <PasswordField fx:id="mdptf" opacity="0.7" prefHeight="31.0" prefWidth="270.0" promptText="Mot de passe" style="-fx-border-radius: 2; -fx-background-color: transparent; -fx-border-color: gray; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1;" />
+               </children>
+            </HBox>
+            <Button fx:id="btnmdpo" mnemonicParsing="false" onAction="#mdpo" prefHeight="19.0" prefWidth="277.0" style="-fx-background-color: transparent;" text="Mot de passe oublieè ?" textFill="#6b3030">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+      <Label alignment="TOP_LEFT" layoutX="65.0" layoutY="159.0" prefHeight="88.0" prefWidth="294.0" text="Bienvenue" textFill="#616161">
+         <font>
+            <Font name="Sitka Small Bold" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

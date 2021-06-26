@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550" prefWidth="800" styleClass="bodyback" stylesheets="@../../gui/style/mystyle.css" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.gui.gestionstagecontroller">
+         <children>
+            <TableView fx:id="table" layoutX="167.0" layoutY="177.0" prefHeight="272.0" prefWidth="621.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="60.0" text="Id_stage" />
+                  <TableColumn fx:id="societe" prefWidth="89.0" text="Société" />
+            <TableColumn fx:id="email_societe" prefWidth="114.0" text="Email_Société" />
+                  <TableColumn fx:id="pays" prefWidth="84.0" text="Pays" />
+                  <TableColumn fx:id="date_debut" prefWidth="93.0" text="Date_debut" />
+            <TableColumn fx:id="date_fin" minWidth="6.0" prefWidth="70.0" text="Date_fin" />
+            <TableColumn fx:id="type_stage" prefWidth="110.0" text="Type_Stage" />
+              </columns>
+            </TableView>
+            <Button layoutX="686.0" layoutY="481.0" mnemonicParsing="false" onAction="#afficherform" prefHeight="30.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="Ajouter">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+            <Label layoutX="317.0" layoutY="103.0" prefHeight="45.0" prefWidth="306.0" text="Gestion des Stages">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+      <VBox layoutX="26.0" layoutY="103.0" prefHeight="386.0" prefWidth="135.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#Utilisateurs" prefHeight="28.0" prefWidth="137.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Utilisateurs" />
+            <Button mnemonicParsing="false" onAction="#departement" prefHeight="29.0" prefWidth="137.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Departements" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="139.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Emplois" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Resultat" />
+            <Button mnemonicParsing="false" onAction="#evenement1" prefHeight="30.0" prefWidth="136.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Evenements" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Stages" />
+            <Button layoutX="10.0" layoutY="257.0" mnemonicParsing="false" onAction="#Matieres" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Matieres" />
+            <Button layoutX="10.0" layoutY="307.0" mnemonicParsing="false" onAction="#deconnecter2" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Déconnexion" />
+         </children>
+      </VBox>
+      <Label layoutX="153.0" layoutY="5.0" text="Bonjour">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="248.0" layoutY="33.0" text="Administrateur">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="332.0" layoutY="481.0" mnemonicParsing="false" onAction="#afficherform2" prefHeight="30.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="Modifier">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="450.0" layoutY="481.0" mnemonicParsing="false" onAction="#afficherform3" prefHeight="30.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="Conventions">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="573.0" layoutY="481.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="Supprimer">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="205.0" layoutY="481.0" mnemonicParsing="false" onAction="#actualiser" prefHeight="30.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="Actualiser">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+         </children>
+      </AnchorPane>

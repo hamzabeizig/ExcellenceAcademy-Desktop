@@ -1,0 +1,18 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 mars 2021, 15:37:19
+    Author     : ASUS
+*/
+.bodyback{
+    -fx-background-image: url(../pics/back2.jpg) ; 
+    -fx-background-size: 100% 100%;
+}
+
+.bodyback0{
+    -fx-background-image: url("../pics/back1.jpg") ; 
+    -fx-background-size: 100% 100%;
+}

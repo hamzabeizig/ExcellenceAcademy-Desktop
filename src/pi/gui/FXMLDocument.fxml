@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.gui.FXMLDocumentController">
+    <stylesheets>
+        <URL value="@/gui/style/mystyle.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="565.0" prefWidth="1000.0" styleClass="bodyback" stylesheets="@../../gui/style/mystyle.css">
+         <children>
+            <Label fx:id="label1" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+            <Button fx:id="btn_org" layoutX="173.0" layoutY="472.0" mnemonicParsing="false" onAction="#formulaire" prefHeight="31.0" prefWidth="86.0" style="-fx-background-radius: 100;" text="Organiser" />
+            <Label layoutX="140.0" layoutY="24.0" text="Bonjour">
+               <font>
+                  <Font name="Garamond" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="152.0" layoutY="46.0" text="Etudiant" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Sitka Banner Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="319.0" layoutY="85.0" prefHeight="35.0" prefWidth="229.0" text=" La liste des évènements">
+               <font>
+                  <Font name="Sitka Banner" size="24.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="195.0" layoutY="144.0" prefHeight="204.0" prefWidth="575.0">
+               <children>
+                  <TableView fx:id="tv" layoutX="-1.0" onMouseClicked="#checkinsc" prefHeight="204.0" prefWidth="577.0">
+                     <columns>
+                        <TableColumn fx:id="nom_ev" prefWidth="131.0" text="Nom évènement" />
+                        <TableColumn fx:id="date_ev" prefWidth="135.0" text="Date évènement" />
+                        <TableColumn fx:id="nbp" prefWidth="137.0" text="Nombre de place" />
+                        <TableColumn fx:id="desc" prefWidth="173.0" text="Description" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <Button fx:id="btn_insc" layoutX="266.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#sinscrireevent" prefHeight="31.0" prefWidth="86.0" style="-fx-background-radius: 100;" text="S'inscrire" />
+            <TextField fx:id="recherche" layoutX="292.0" layoutY="387.0" />
+            <Button layoutX="484.0" layoutY="472.0" mnemonicParsing="false" onAction="#intermesev" prefHeight="31.0" prefWidth="129.0" style="-fx-background-radius: 100;" text="Mes Evenments" />
+            <Button fx:id="btn_desins" layoutX="362.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#desinscrireevent" prefHeight="31.0" prefWidth="110.0" style="-fx-background-radius: 100;" text="Désabonner" />
+            <Button fx:id="btn_mesparticip" layoutX="620.0" layoutY="469.0" mnemonicParsing="false" onAction="#interparticip" prefHeight="31.0" prefWidth="148.0" style="-fx-background-radius: 100;" text="Mes participations" />
+            <Label layoutX="216.0" layoutY="386.0" prefHeight="22.0" prefWidth="69.0" text="Recherche" />
+         </children>
+      </AnchorPane>
+      <VBox layoutX="36.0" layoutY="113.0" prefHeight="386.0" prefWidth="135.0" spacing="15.0">
+         <children>
+            <Button fx:id="btn_profil" mnemonicParsing="false" onAction="#profil" prefHeight="28.0" prefWidth="137.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Profil" />
+            <Button fx:id="btn_emp" mnemonicParsing="false" onAction="#Emplois" prefHeight="29.0" prefWidth="137.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Emplois" />
+            <Button fx:id="btn_res" mnemonicParsing="false" onAction="#Resultat" prefHeight="30.0" prefWidth="139.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Resultats" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Evenements" />
+            <Button fx:id="btn_stg" mnemonicParsing="false" onAction="#stage" prefHeight="30.0" prefWidth="136.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Stages" />
+            <Button fx:id="btn_mat" mnemonicParsing="false" onAction="#Matrieres" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Matieres" />
+            <Button fx:id="btn_cr" layoutX="10.0" layoutY="257.0" mnemonicParsing="false" onAction="#Cours" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Cours" />
+            <Button fx:id="btn_ass" layoutX="10.0" layoutY="307.0" mnemonicParsing="false" onAction="#Assiduité" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Assiduité" />
+            <Button fx:id="btn_de" layoutX="10.0" layoutY="322.0" mnemonicParsing="false" onAction="#deconnecter2" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Deconnexion" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

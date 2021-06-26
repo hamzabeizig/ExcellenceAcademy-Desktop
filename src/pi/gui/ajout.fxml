@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.gui.stagecontroller">
+   <children>
+      <AnchorPane layoutX="6.0" layoutY="2.0" prefHeight="550.0" prefWidth="700.0" styleClass="bodyback" stylesheets="@../../gui/style/mystyle.css">
+         <children>
+            <Label layoutX="271.0" layoutY="48.0" prefHeight="57.0" prefWidth="261.0" text="Ajouter un stage ">
+               <font>
+                  <Font name="Agency FB" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="237.0" layoutY="260.0" text="date debut" />
+            <Label layoutX="240.0" layoutY="306.0" text="date fin" />
+            <Label layoutX="248.0" layoutY="350.0" text="Type" />
+            <TextField fx:id="txtty" layoutX="315.0" layoutY="346.0" />
+            <Label layoutX="241.0" layoutY="145.0" text="Sociéte" />
+            <TextField fx:id="txts" layoutX="315.0" layoutY="141.0" prefHeight="25.0" prefWidth="149.0" />
+            <TextField fx:id="txtp" layoutX="315.0" layoutY="214.0" />
+            <Label layoutX="249.0" layoutY="218.0" text="Pays" />
+            <Button layoutX="498.0" layoutY="381.0" mnemonicParsing="false" onAction="#ajouter" style="-fx-background-radius: 100;" text="Confirmer" />
+            <VBox layoutX="29.0" layoutY="75.0" prefHeight="386.0" prefWidth="135.0" spacing="15.0">
+               <children>
+                  <Button fx:id="btn_prf" mnemonicParsing="false" onAction="#profil" prefHeight="28.0" prefWidth="137.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Profil" />
+                  <Button fx:id="btn_emp" mnemonicParsing="false" onAction="#Emplois" prefHeight="29.0" prefWidth="137.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Emplois" />
+                  <Button fx:id="btn_res" mnemonicParsing="false" onAction="#Resultat" prefHeight="30.0" prefWidth="139.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Resultats" />
+                  <Button fx:id="btn_ev" mnemonicParsing="false" onAction="#Evenement" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Evenements" />
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="136.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Stages" />
+                  <Button fx:id="btn_mat" mnemonicParsing="false" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Matieres" />
+                  <Button fx:id="btn_cr" layoutX="10.0" layoutY="232.0" mnemonicParsing="false" onAction="#Cours" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Cours" />
+                  <Button fx:id="btn_ass" layoutX="10.0" layoutY="277.0" mnemonicParsing="false" onAction="#Assiduité" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Assiduité" />
+                  <Button fx:id="btn_dec" layoutX="10.0" layoutY="322.0" mnemonicParsing="false" onAction="#Deconnecter" prefHeight="30.0" prefWidth="145.0" style="-fx-background-radius: 100; -fx-background-color: #ececec;" text="Déconnexion" />
+               </children>
+            </VBox>
+            <DatePicker fx:id="dateP1" layoutX="315.0" layoutY="256.0" />
+            <DatePicker fx:id="dateP2" layoutX="315.0" layoutY="302.0" />
+            <Label layoutX="231.0" layoutY="181.0" text="Email Société" />
+            <TextField fx:id="txte" layoutX="315.0" layoutY="177.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
